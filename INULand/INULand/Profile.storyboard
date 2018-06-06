@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ibD-YT-g7j">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="01M-ge-mpi">
+            <objects>
+                <viewController id="ibD-YT-g7j" customClass="ProfileViewController" customModule="INULand" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bcd-HN-8sl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainTop" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-at-aQT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-Yx-MXy">
+                                <rect key="frame" x="189" y="34" width="33" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0g-Lh-foy">
+                                <rect key="frame" x="189" y="109" width="39" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학번" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70x-BB-ZZq">
+                                <rect key="frame" x="190" y="145" width="28" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="gat-ey-wuu">
+                                <rect key="frame" x="40" y="84" width="101" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="a31-kR-LQ4"/>
+                                    <constraint firstAttribute="width" constant="101" id="lW3-zA-aZL"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAv-UD-vbL">
+                                <rect key="frame" x="15" y="247" width="384" height="199"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collectionTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Afi-ZG-YtS">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="54"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예약 상태" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igl-gj-IaX">
+                                        <rect key="frame" x="28" y="17" width="71" height="20"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="18"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-Zg-P0V">
+                                        <rect key="frame" x="30" y="88" width="37" height="23"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-mW-ej7">
+                                        <rect key="frame" x="319" y="88" width="37" height="23"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
+                                        <color key="textColor" red="0.3294117647" green="0.48627450979999998" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예약된 내용이 없습니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-sS-k3a">
+                                        <rect key="frame" x="76.666666666666671" y="117" width="230.66666666666663" height="27"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-6X-yc4">
+                                        <rect key="frame" x="0.0" y="140" width="384" height="1"/>
+                                        <color key="backgroundColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="4Zt-vb-n0j"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKM-bq-HFs">
+                                        <rect key="frame" x="0.0" y="141" width="384" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="예약 취소">
+                                            <color key="titleColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reservationCancleClicked:" destination="ibD-YT-g7j" eventType="touchUpInside" id="0Ll-lY-5IV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qRm-sS-k3a" firstAttribute="top" secondItem="cAv-UD-vbL" secondAttribute="top" constant="117" id="1Ue-J8-b6U"/>
+                                    <constraint firstItem="Afi-ZG-YtS" firstAttribute="leading" secondItem="cAv-UD-vbL" secondAttribute="leading" id="4Bn-4a-K0r"/>
+                                    <constraint firstItem="igl-gj-IaX" firstAttribute="top" secondItem="cAv-UD-vbL" secondAttribute="top" constant="17" id="5Bc-4P-5La"/>
+                                    <constraint firstItem="5c0-6X-yc4" firstAttribute="top" secondItem="9NG-Zg-P0V" secondAttribute="bottom" constant="29" id="9jg-Sc-Da7"/>
+                                    <constraint firstItem="Afi-ZG-YtS" firstAttribute="top" secondItem="cAv-UD-vbL" secondAttribute="top" id="B4d-ug-4bz"/>
+                                    <constraint firstItem="UKM-bq-HFs" firstAttribute="top" secondItem="5c0-6X-yc4" secondAttribute="bottom" id="DJo-Hc-wqe"/>
+                                    <constraint firstItem="9NG-Zg-P0V" firstAttribute="leading" secondItem="cAv-UD-vbL" secondAttribute="leading" constant="30" id="I9F-WY-N4k"/>
+                                    <constraint firstAttribute="bottom" secondItem="qRm-sS-k3a" secondAttribute="bottom" constant="55" id="MRv-Dw-SrL"/>
+                                    <constraint firstItem="Fad-mW-ej7" firstAttribute="top" secondItem="Afi-ZG-YtS" secondAttribute="bottom" constant="34" id="PoT-SX-UxN"/>
+                                    <constraint firstAttribute="trailing" secondItem="5c0-6X-yc4" secondAttribute="trailing" id="XMt-OR-93x"/>
+                                    <constraint firstItem="UKM-bq-HFs" firstAttribute="leading" secondItem="cAv-UD-vbL" secondAttribute="leading" id="bEL-XL-tLE"/>
+                                    <constraint firstAttribute="bottom" secondItem="UKM-bq-HFs" secondAttribute="bottom" id="db3-AN-pQh"/>
+                                    <constraint firstItem="5c0-6X-yc4" firstAttribute="leading" secondItem="cAv-UD-vbL" secondAttribute="leading" id="ffy-KD-FRZ"/>
+                                    <constraint firstItem="9NG-Zg-P0V" firstAttribute="top" secondItem="Afi-ZG-YtS" secondAttribute="bottom" constant="34" id="iOG-d1-eeA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fad-mW-ej7" secondAttribute="trailing" constant="28" id="kot-eW-snR"/>
+                                    <constraint firstAttribute="trailing" secondItem="UKM-bq-HFs" secondAttribute="trailing" id="n9Y-YJ-Osw"/>
+                                    <constraint firstAttribute="width" constant="384" id="v42-3x-mMv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Afi-ZG-YtS" secondAttribute="trailing" id="vSi-Mt-cLA"/>
+                                    <constraint firstItem="qRm-sS-k3a" firstAttribute="centerX" secondItem="cAv-UD-vbL" secondAttribute="centerX" id="xgC-dt-Viv"/>
+                                    <constraint firstItem="igl-gj-IaX" firstAttribute="leading" secondItem="cAv-UD-vbL" secondAttribute="leading" constant="28" id="xiz-b1-OVj"/>
+                                    <constraint firstAttribute="height" constant="199" id="yvI-Rl-UZL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qd8-Mt-YLb">
+                                <rect key="frame" x="15" y="472" width="384" height="166"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collectionTitle" translatesAutoresizingMaskIntoConstraints="NO" id="c9J-Bj-Xsy">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="54"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-XL-D2k">
+                                        <rect key="frame" x="28" y="17" width="33" height="20"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="18"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경고 횟수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDt-yS-dbn">
+                                        <rect key="frame" x="30" y="86" width="78" height="23"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-mh-5vn">
+                                        <rect key="frame" x="305" y="85" width="53" height="23"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
+                                        <color key="textColor" red="0.3294117647" green="0.48627450979999998" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3번 경고시 한달간 이용불가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-9Y-LEv">
+                                        <rect key="frame" x="30" y="129" width="160" height="16"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="14"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="4No-3E-ICR"/>
+                                    <constraint firstAttribute="trailing" secondItem="c9J-Bj-Xsy" secondAttribute="trailing" id="6M2-GG-dy8"/>
+                                    <constraint firstItem="Ucq-XL-D2k" firstAttribute="top" secondItem="qd8-Mt-YLb" secondAttribute="top" constant="17" id="90o-W6-lpM"/>
+                                    <constraint firstAttribute="width" constant="384" id="H7C-gq-DFv"/>
+                                    <constraint firstItem="zr9-9Y-LEv" firstAttribute="top" secondItem="MDt-yS-dbn" secondAttribute="bottom" constant="20" id="IU5-Hg-x9v"/>
+                                    <constraint firstItem="c9J-Bj-Xsy" firstAttribute="top" secondItem="qd8-Mt-YLb" secondAttribute="top" id="Qbx-PH-Uoz"/>
+                                    <constraint firstItem="c9J-Bj-Xsy" firstAttribute="leading" secondItem="qd8-Mt-YLb" secondAttribute="leading" id="V8T-Wi-TKJ"/>
+                                    <constraint firstItem="Ucq-XL-D2k" firstAttribute="leading" secondItem="qd8-Mt-YLb" secondAttribute="leading" constant="28" id="XKJ-im-qGE"/>
+                                    <constraint firstAttribute="bottom" secondItem="zr9-9Y-LEv" secondAttribute="bottom" constant="21" id="caH-q3-TSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="5E6-mh-5vn" secondAttribute="trailing" constant="26" id="d87-h4-dq9"/>
+                                    <constraint firstItem="MDt-yS-dbn" firstAttribute="leading" secondItem="qd8-Mt-YLb" secondAttribute="leading" constant="30" id="igY-g3-oQs"/>
+                                    <constraint firstItem="zr9-9Y-LEv" firstAttribute="leading" secondItem="qd8-Mt-YLb" secondAttribute="leading" constant="30" id="lyy-qZ-IQT"/>
+                                    <constraint firstItem="5E6-mh-5vn" firstAttribute="top" secondItem="c9J-Bj-Xsy" secondAttribute="bottom" constant="31" id="mJU-e9-gUR"/>
+                                    <constraint firstItem="MDt-yS-dbn" firstAttribute="top" secondItem="c9J-Bj-Xsy" secondAttribute="bottom" constant="32" id="zCl-Gi-nyq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-vR-aLD">
+                                <rect key="frame" x="363" y="29" width="30" height="36"/>
+                                <state key="normal" image="logout"/>
+                                <connections>
+                                    <action selector="logOutButtonClicked:" destination="ibD-YT-g7j" eventType="touchUpInside" id="YSe-fF-rz3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qd8-Mt-YLb" firstAttribute="top" secondItem="cAv-UD-vbL" secondAttribute="bottom" constant="26" id="0dg-xH-Mnz"/>
+                            <constraint firstItem="D0g-Lh-foy" firstAttribute="top" secondItem="gjP-Yx-MXy" secondAttribute="bottom" constant="48" id="554-cM-PQB"/>
+                            <constraint firstItem="qd8-Mt-YLb" firstAttribute="leading" secondItem="hZJ-kP-HfI" secondAttribute="leading" constant="15" id="9U8-vv-BMT"/>
+                            <constraint firstItem="hZJ-kP-HfI" firstAttribute="trailing" secondItem="qd8-Mt-YLb" secondAttribute="trailing" constant="15" id="Ayy-LV-7VK"/>
+                            <constraint firstItem="70x-BB-ZZq" firstAttribute="top" secondItem="D0g-Lh-foy" secondAttribute="bottom" constant="9" id="Bhe-Rn-ZRb"/>
+                            <constraint firstItem="rdF-at-aQT" firstAttribute="trailing" secondItem="hZJ-kP-HfI" secondAttribute="trailing" id="EMa-yW-Yxo"/>
+                            <constraint firstItem="rdF-at-aQT" firstAttribute="leading" secondItem="hZJ-kP-HfI" secondAttribute="leading" id="Fgt-F6-b1K"/>
+                            <constraint firstItem="gat-ey-wuu" firstAttribute="leading" secondItem="hZJ-kP-HfI" secondAttribute="leading" constant="40" id="H2K-Wu-X5x"/>
+                            <constraint firstItem="cAv-UD-vbL" firstAttribute="top" secondItem="rdF-at-aQT" secondAttribute="bottom" constant="18" id="a37-EJ-fRY"/>
+                            <constraint firstItem="Ajr-vR-aLD" firstAttribute="top" secondItem="hZJ-kP-HfI" secondAttribute="top" constant="9" id="bph-qH-sdG"/>
+                            <constraint firstItem="D0g-Lh-foy" firstAttribute="leading" secondItem="gat-ey-wuu" secondAttribute="trailing" constant="48" id="h7X-sp-AJE"/>
+                            <constraint firstItem="rdF-at-aQT" firstAttribute="top" secondItem="Bcd-HN-8sl" secondAttribute="top" id="hM0-6W-nnK"/>
+                            <constraint firstItem="hZJ-kP-HfI" firstAttribute="trailing" secondItem="Ajr-vR-aLD" secondAttribute="trailing" constant="21" id="iN9-4g-qXj"/>
+                            <constraint firstItem="gat-ey-wuu" firstAttribute="top" secondItem="hZJ-kP-HfI" secondAttribute="top" constant="64" id="lTV-rg-OWw"/>
+                            <constraint firstItem="cAv-UD-vbL" firstAttribute="leading" secondItem="hZJ-kP-HfI" secondAttribute="leading" constant="15" id="pf9-Ke-yI4"/>
+                            <constraint firstItem="70x-BB-ZZq" firstAttribute="leading" secondItem="gat-ey-wuu" secondAttribute="trailing" constant="49" id="ro7-hd-lOf"/>
+                            <constraint firstItem="gjP-Yx-MXy" firstAttribute="top" secondItem="hZJ-kP-HfI" secondAttribute="top" constant="14" id="t9A-Lc-mjf"/>
+                            <constraint firstItem="Ajr-vR-aLD" firstAttribute="leading" secondItem="gjP-Yx-MXy" secondAttribute="trailing" constant="141" id="x3l-Y9-0jm"/>
+                            <constraint firstItem="hZJ-kP-HfI" firstAttribute="trailing" secondItem="cAv-UD-vbL" secondAttribute="trailing" constant="15" id="zlU-jF-Fh4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hZJ-kP-HfI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tabMy" id="OjO-2H-vn1">
+                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="divisionLine" destination="5c0-6X-yc4" id="5gc-Qg-una"/>
+                        <outlet property="noReservationLabel" destination="qRm-sS-k3a" id="chT-oT-smx"/>
+                        <outlet property="noShowCellView" destination="qd8-Mt-YLb" id="Mzt-Ce-WaU"/>
+                        <outlet property="noShowCountLabel" destination="5E6-mh-5vn" id="zT3-VQ-0RE"/>
+                        <outlet property="profileId" destination="70x-BB-ZZq" id="IQD-AD-5H1"/>
+                        <outlet property="profileName" destination="D0g-Lh-foy" id="pEz-he-McN"/>
+                        <outlet property="reservationCancelButton" destination="UKM-bq-HFs" id="YGX-qE-caC"/>
+                        <outlet property="reservationCellView" destination="cAv-UD-vbL" id="dMf-pT-hDi"/>
+                        <outlet property="reservationLocationLabel" destination="9NG-Zg-P0V" id="gzx-C1-gcB"/>
+                        <outlet property="reservationTimeLabel" destination="Fad-mW-ej7" id="AUb-Sm-xgj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri8-8W-LgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.46376811594206" y="101.90217391304348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="collectionTitle" width="384" height="54"/>
+        <image name="logout" width="30" height="36"/>
+        <image name="mainTop" width="414" height="229"/>
+        <image name="profileImage" width="119" height="119"/>
+        <image name="tabMy" width="28" height="51"/>
+    </resources>
+</document>

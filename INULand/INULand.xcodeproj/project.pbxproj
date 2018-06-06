@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A46897C3BAC902BFE12C4E1 /* Pods_INULand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A8C196B6DF658452F45DD2 /* Pods_INULand.framework */; };
+		938DF2FC20C5719D006ACEA9 /* CultureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938DF2FB20C5719D006ACEA9 /* CultureViewController.swift */; };
+		93B735A020C4CF3000C299FE /* RentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7359E20C4CF3000C299FE /* RentCollectionViewCell.swift */; };
+		93B735A120C4CF3000C299FE /* RentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93B7359F20C4CF3000C299FE /* RentCollectionViewCell.xib */; };
+		93B735A320C4D1D300C299FE /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B735A220C4D1D300C299FE /* RentViewController.swift */; };
+		C8A99ABF20C586EC00A8CBB0 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A99ABE20C586EC00A8CBB0 /* Contact.swift */; };
+		C8A99AC120C5889A00A8CBB0 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A99AC020C5889A00A8CBB0 /* NetworkModel.swift */; };
+		C8A99AC320C58A7400A8CBB0 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A99AC220C58A7400A8CBB0 /* NetworkCallback.swift */; };
+		C8F183B520C458C500ED8321 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F183B420C458C500ED8321 /* ProfileViewController.swift */; };
+		DA22905F20BD483F00159593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22905E20BD483F00159593 /* AppDelegate.swift */; };
+		DA22906120BD483F00159593 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22906020BD483F00159593 /* LoginViewController.swift */; };
+		DA22906420BD483F00159593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA22906220BD483F00159593 /* Main.storyboard */; };
+		DA22906620BD483F00159593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA22906520BD483F00159593 /* Assets.xcassets */; };
+		DA22906920BD483F00159593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA22906720BD483F00159593 /* LaunchScreen.storyboard */; };
+		DA58CF8E20C437A9005C9993 /* Playstation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58CF8D20C437A9005C9993 /* Playstation.storyboard */; };
+		DA58CF9020C437EC005C9993 /* Culture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58CF8F20C437EC005C9993 /* Culture.storyboard */; };
+		DA58CF9220C43814005C9993 /* Rent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58CF9120C43814005C9993 /* Rent.storyboard */; };
+		DA58CF9620C43838005C9993 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58CF9520C43838005C9993 /* Profile.storyboard */; };
+		DAF4CD2220C3DB9C00AEEB67 /* SingingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF4CD2120C3DB9C00AEEB67 /* SingingRoomViewController.swift */; };
+		DAF4CD2520C3E20D00AEEB67 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF4CD2420C3E20C00AEEB67 /* NanumSquareOTFRegular.otf */; };
+		DAF4CD2B20C3E40F00AEEB67 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF4CD2A20C3E40F00AEEB67 /* NanumSquareOTFBold.otf */; };
+		DAF7457920C7B08D0081EF41 /* PlaystationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7457720C7B08D0081EF41 /* PlaystationCollectionViewCell.swift */; };
+		DAF7457A20C7B08D0081EF41 /* PlaystationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF7457820C7B08D0081EF41 /* PlaystationCollectionViewCell.xib */; };
+		DAF7457C20C7B1180081EF41 /* PlaystationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7457B20C7B1180081EF41 /* PlaystationViewController.swift */; };
+		DAF7457E20C7F6110081EF41 /* RentalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7457D20C7F6110081EF41 /* RentalInfo.swift */; };
+		DAF7458320C7F7B30081EF41 /* Culture2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7457F20C7F7B20081EF41 /* Culture2CollectionViewCell.swift */; };
+		DAF7458420C7F7B30081EF41 /* CultureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7458020C7F7B20081EF41 /* CultureCollectionViewCell.swift */; };
+		DAF7458520C7F7B30081EF41 /* CultureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF7458120C7F7B20081EF41 /* CultureCollectionViewCell.xib */; };
+		DAF7458620C7F7B30081EF41 /* Culture2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF7458220C7F7B30081EF41 /* Culture2CollectionViewCell.xib */; };
+		DAF9023220C64B7C005DB2B9 /* SingingRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9023120C64B7C005DB2B9 /* SingingRoom.swift */; };
+		DAF9023920C653C8005DB2B9 /* SingingRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9023720C653C8005DB2B9 /* SingingRoomCollectionViewCell.swift */; };
+		DAF9023A20C653C8005DB2B9 /* SingingRoomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF9023820C653C8005DB2B9 /* SingingRoomCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		54A8C196B6DF658452F45DD2 /* Pods_INULand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INULand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79BDBD47A5A03DD8EE6A3514 /* Pods-INULand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INULand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INULand/Pods-INULand.debug.xcconfig"; sourceTree = "<group>"; };
+		938DF2FB20C5719D006ACEA9 /* CultureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureViewController.swift; sourceTree = "<group>"; };
+		93B7359E20C4CF3000C299FE /* RentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCollectionViewCell.swift; sourceTree = "<group>"; };
+		93B7359F20C4CF3000C299FE /* RentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentCollectionViewCell.xib; sourceTree = "<group>"; };
+		93B735A220C4D1D300C299FE /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
+		C8A99ABE20C586EC00A8CBB0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		C8A99AC020C5889A00A8CBB0 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		C8A99AC220C58A7400A8CBB0 /* NetworkCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
+		C8F183B420C458C500ED8321 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DA22905B20BD483F00159593 /* INULand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INULand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA22905E20BD483F00159593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA22906020BD483F00159593 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA22906320BD483F00159593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA22906520BD483F00159593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA22906820BD483F00159593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA22906A20BD483F00159593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA58CF8D20C437A9005C9993 /* Playstation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Playstation.storyboard; sourceTree = "<group>"; };
+		DA58CF8F20C437EC005C9993 /* Culture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Culture.storyboard; sourceTree = "<group>"; };
+		DA58CF9120C43814005C9993 /* Rent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rent.storyboard; sourceTree = "<group>"; };
+		DA58CF9520C43838005C9993 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DAF4CD2120C3DB9C00AEEB67 /* SingingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingingRoomViewController.swift; sourceTree = "<group>"; };
+		DAF4CD2420C3E20C00AEEB67 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
+		DAF4CD2A20C3E40F00AEEB67 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
+		DAF7457720C7B08D0081EF41 /* PlaystationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaystationCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAF7457820C7B08D0081EF41 /* PlaystationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaystationCollectionViewCell.xib; sourceTree = "<group>"; };
+		DAF7457B20C7B1180081EF41 /* PlaystationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaystationViewController.swift; sourceTree = "<group>"; };
+		DAF7457D20C7F6110081EF41 /* RentalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalInfo.swift; sourceTree = "<group>"; };
+		DAF7457F20C7F7B20081EF41 /* Culture2CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Culture2CollectionViewCell.swift; sourceTree = "<group>"; };
+		DAF7458020C7F7B20081EF41 /* CultureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAF7458120C7F7B20081EF41 /* CultureCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CultureCollectionViewCell.xib; sourceTree = "<group>"; };
+		DAF7458220C7F7B30081EF41 /* Culture2CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Culture2CollectionViewCell.xib; sourceTree = "<group>"; };
+		DAF9023120C64B7C005DB2B9 /* SingingRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingingRoom.swift; sourceTree = "<group>"; };
+		DAF9023720C653C8005DB2B9 /* SingingRoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingingRoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAF9023820C653C8005DB2B9 /* SingingRoomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingingRoomCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA42CC74398E317EE2738C2F /* Pods-INULand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INULand.release.xcconfig"; path = "Pods/Target Support Files/Pods-INULand/Pods-INULand.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA22905820BD483F00159593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A46897C3BAC902BFE12C4E1 /* Pods_INULand.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089BAF89CEF7A2D2464BC740 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54A8C196B6DF658452F45DD2 /* Pods_INULand.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69E4AA3B7E6E4FE88F453959 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79BDBD47A5A03DD8EE6A3514 /* Pods-INULand.debug.xcconfig */,
+				FA42CC74398E317EE2738C2F /* Pods-INULand.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8A99ABD20C586D300A8CBB0 /* NetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				C8A99ABE20C586EC00A8CBB0 /* Contact.swift */,
+				C8A99AC020C5889A00A8CBB0 /* NetworkModel.swift */,
+				C8A99AC220C58A7400A8CBB0 /* NetworkCallback.swift */,
+				DAF9023120C64B7C005DB2B9 /* SingingRoom.swift */,
+				DAF7457D20C7F6110081EF41 /* RentalInfo.swift */,
+			);
+			path = NetworkModel;
+			sourceTree = "<group>";
+		};
+		DA22905220BD483F00159593 = {
+			isa = PBXGroup;
+			children = (
+				DA22905D20BD483F00159593 /* INULand */,
+				DA22905C20BD483F00159593 /* Products */,
+				69E4AA3B7E6E4FE88F453959 /* Pods */,
+				089BAF89CEF7A2D2464BC740 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA22905C20BD483F00159593 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA22905B20BD483F00159593 /* INULand.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA22905D20BD483F00159593 /* INULand */ = {
+			isa = PBXGroup;
+			children = (
+				C8A99ABD20C586D300A8CBB0 /* NetworkModel */,
+				DA58CF8C20C43225005C9993 /* Model */,
+				DAF4CD2320C3E16D00AEEB67 /* Font */,
+				DA22905E20BD483F00159593 /* AppDelegate.swift */,
+				DAF4CD2120C3DB9C00AEEB67 /* SingingRoomViewController.swift */,
+				DAF7457B20C7B1180081EF41 /* PlaystationViewController.swift */,
+				DA22906220BD483F00159593 /* Main.storyboard */,
+				DA22906520BD483F00159593 /* Assets.xcassets */,
+				DA22906720BD483F00159593 /* LaunchScreen.storyboard */,
+				DA22906A20BD483F00159593 /* Info.plist */,
+				DA58CF8D20C437A9005C9993 /* Playstation.storyboard */,
+				DA22906020BD483F00159593 /* LoginViewController.swift */,
+				DA58CF8F20C437EC005C9993 /* Culture.storyboard */,
+				938DF2FB20C5719D006ACEA9 /* CultureViewController.swift */,
+				DA58CF9120C43814005C9993 /* Rent.storyboard */,
+				93B735A220C4D1D300C299FE /* RentViewController.swift */,
+				C8F183B420C458C500ED8321 /* ProfileViewController.swift */,
+				DA58CF9520C43838005C9993 /* Profile.storyboard */,
+			);
+			path = INULand;
+			sourceTree = "<group>";
+		};
+		DA58CF8C20C43225005C9993 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAF7457F20C7F7B20081EF41 /* Culture2CollectionViewCell.swift */,
+				DAF7458220C7F7B30081EF41 /* Culture2CollectionViewCell.xib */,
+				DAF7458020C7F7B20081EF41 /* CultureCollectionViewCell.swift */,
+				DAF7458120C7F7B20081EF41 /* CultureCollectionViewCell.xib */,
+				93B7359E20C4CF3000C299FE /* RentCollectionViewCell.swift */,
+				93B7359F20C4CF3000C299FE /* RentCollectionViewCell.xib */,
+				DAF9023720C653C8005DB2B9 /* SingingRoomCollectionViewCell.swift */,
+				DAF9023820C653C8005DB2B9 /* SingingRoomCollectionViewCell.xib */,
+				DAF7457720C7B08D0081EF41 /* PlaystationCollectionViewCell.swift */,
+				DAF7457820C7B08D0081EF41 /* PlaystationCollectionViewCell.xib */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAF4CD2320C3E16D00AEEB67 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DAF4CD2A20C3E40F00AEEB67 /* NanumSquareOTFBold.otf */,
+				DAF4CD2420C3E20C00AEEB67 /* NanumSquareOTFRegular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA22905A20BD483F00159593 /* INULand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA22906D20BD483F00159593 /* Build configuration list for PBXNativeTarget "INULand" */;
+			buildPhases = (
+				15D7748635BFD2982BCCFC6C /* [CP] Check Pods Manifest.lock */,
+				DA22905720BD483F00159593 /* Sources */,
+				DA22905820BD483F00159593 /* Frameworks */,
+				DA22905920BD483F00159593 /* Resources */,
+				E44B75F16D66426DC254667F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = INULand;
+			productName = INULand;
+			productReference = DA22905B20BD483F00159593 /* INULand.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA22905320BD483F00159593 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Cho;
+				TargetAttributes = {
+					DA22905A20BD483F00159593 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DA22905620BD483F00159593 /* Build configuration list for PBXProject "INULand" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA22905220BD483F00159593;
+			productRefGroup = DA22905C20BD483F00159593 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA22905A20BD483F00159593 /* INULand */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA22905920BD483F00159593 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58CF8E20C437A9005C9993 /* Playstation.storyboard in Resources */,
+				DA58CF9620C43838005C9993 /* Profile.storyboard in Resources */,
+				DAF9023A20C653C8005DB2B9 /* SingingRoomCollectionViewCell.xib in Resources */,
+				DAF7457A20C7B08D0081EF41 /* PlaystationCollectionViewCell.xib in Resources */,
+				DA22906920BD483F00159593 /* LaunchScreen.storyboard in Resources */,
+				DA22906620BD483F00159593 /* Assets.xcassets in Resources */,
+				DA22906420BD483F00159593 /* Main.storyboard in Resources */,
+				DAF4CD2B20C3E40F00AEEB67 /* NanumSquareOTFBold.otf in Resources */,
+				DA58CF9020C437EC005C9993 /* Culture.storyboard in Resources */,
+				93B735A120C4CF3000C299FE /* RentCollectionViewCell.xib in Resources */,
+				DAF7458520C7F7B30081EF41 /* CultureCollectionViewCell.xib in Resources */,
+				DA58CF9220C43814005C9993 /* Rent.storyboard in Resources */,
+				DAF7458620C7F7B30081EF41 /* Culture2CollectionViewCell.xib in Resources */,
+				DAF4CD2520C3E20D00AEEB67 /* NanumSquareOTFRegular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15D7748635BFD2982BCCFC6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-INULand-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E44B75F16D66426DC254667F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-INULand/Pods-INULand-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BetterSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INULand/Pods-INULand-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA22905720BD483F00159593 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF7458320C7F7B30081EF41 /* Culture2CollectionViewCell.swift in Sources */,
+				93B735A020C4CF3000C299FE /* RentCollectionViewCell.swift in Sources */,
+				DAF7457C20C7B1180081EF41 /* PlaystationViewController.swift in Sources */,
+				C8F183B520C458C500ED8321 /* ProfileViewController.swift in Sources */,
+				DAF4CD2220C3DB9C00AEEB67 /* SingingRoomViewController.swift in Sources */,
+				C8A99AC120C5889A00A8CBB0 /* NetworkModel.swift in Sources */,
+				93B735A320C4D1D300C299FE /* RentViewController.swift in Sources */,
+				DAF7457E20C7F6110081EF41 /* RentalInfo.swift in Sources */,
+				DAF7457920C7B08D0081EF41 /* PlaystationCollectionViewCell.swift in Sources */,
+				DAF7458420C7F7B30081EF41 /* CultureCollectionViewCell.swift in Sources */,
+				DAF9023920C653C8005DB2B9 /* SingingRoomCollectionViewCell.swift in Sources */,
+				C8A99AC320C58A7400A8CBB0 /* NetworkCallback.swift in Sources */,
+				C8A99ABF20C586EC00A8CBB0 /* Contact.swift in Sources */,
+				DAF9023220C64B7C005DB2B9 /* SingingRoom.swift in Sources */,
+				DA22906120BD483F00159593 /* LoginViewController.swift in Sources */,
+				938DF2FC20C5719D006ACEA9 /* CultureViewController.swift in Sources */,
+				DA22905F20BD483F00159593 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA22906220BD483F00159593 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA22906320BD483F00159593 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA22906720BD483F00159593 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA22906820BD483F00159593 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA22906B20BD483F00159593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA22906C20BD483F00159593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA22906E20BD483F00159593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BDBD47A5A03DD8EE6A3514 /* Pods-INULand.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8MB894TP6V;
+				INFOPLIST_FILE = INULand/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "INU-school-lab-hw.INULand";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA22906F20BD483F00159593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA42CC74398E317EE2738C2F /* Pods-INULand.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8MB894TP6V;
+				INFOPLIST_FILE = INULand/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "INU-school-lab-hw.INULand";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA22905620BD483F00159593 /* Build configuration list for PBXProject "INULand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA22906B20BD483F00159593 /* Debug */,
+				DA22906C20BD483F00159593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA22906D20BD483F00159593 /* Build configuration list for PBXNativeTarget "INULand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA22906E20BD483F00159593 /* Debug */,
+				DA22906F20BD483F00159593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA22905320BD483F00159593 /* Project object */;
+}
