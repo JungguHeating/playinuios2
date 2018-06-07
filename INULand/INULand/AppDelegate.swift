@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var profileInfo:userinfo?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //Firebase 적용
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         // Override point for customization after application launch.

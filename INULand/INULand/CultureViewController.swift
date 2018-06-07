@@ -73,7 +73,7 @@ class CultureViewController: UIViewController {
                                 .bouncesOnChange(false),
                                 .panningDisabled(false)])
         indicatorControl.autoresizingMask = [.flexibleWidth]
-        let customSubview = UIView(frame: CGRect(x: 0, y: 45, width: 207, height: 4.0))
+        let customSubview = UIView(frame: CGRect(x: 0, y: 51, width: 207, height: 4.0))
         customSubview.backgroundColor = UIColor(red:84/255, green:124/255, blue:227/255, alpha:1.00)
         customSubview.layer.cornerRadius = 2.0
         customSubview.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]

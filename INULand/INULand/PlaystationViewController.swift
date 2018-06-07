@@ -16,7 +16,7 @@ class PlaystationViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
+    
     var isSuccess: Bool = false
     
     var rooms: [SingingRoom] = [] {
@@ -47,23 +47,23 @@ class PlaystationViewController: UIViewController {
         let model = NetworkModel(self)
         model.getPlaystation()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 //CollectionView
@@ -191,7 +191,7 @@ extension PlaystationViewController: UICollectionViewDelegate, UICollectionViewD
         
         return cell
     }
-
+    
 }
 
 //Network
@@ -259,91 +259,131 @@ extension PlaystationViewController {
     }
     
     @objc func roomOneClicked(sender: UIButton) {
-        let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
-        
-        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-        let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
-            let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag].roomNum!)&roomTime=\(self.times[sender.tag])00&resTime=\(self.times[sender.tag]):00"
-            let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
-            cell.roomOneButton.layer.sublayers?.removeAll()
-            cell.roomOneLabel.text = self.status[0]
-            cell.roomOneButton.isEnabled = false
-            let model = NetworkModel(self)
-            model.givePlaystation(param: param, tag: sender.tag)
-            self.startLoading()
+        if appDelegate.profileInfo?.reserved! == 0 {
+            let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
+            
+            //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+            let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag].roomNum!)&roomTime=\(self.times[sender.tag])00&resTime=\(self.times[sender.tag]):00"
+                let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
+                cell.roomOneButton.layer.sublayers?.removeAll()
+                cell.roomOneLabel.text = self.status[0]
+                cell.roomOneButton.isEnabled = false
+                let model = NetworkModel(self)
+                model.givePlaystation(param: param, tag: sender.tag)
+                self.startLoading()
+            }
+            
+            let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
         }
-        
-        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelButton)
-        self.present(alertController,animated: true,completion: nil)
+        else {
+            let alertController = UIAlertController(title: "이미 예약된 이력이 있습니다",message: "한 사람당 하나의 예약만 가능합니다.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
+        }
     }
     
     @objc func roomTwoClicked(sender: UIButton) {
-        let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
-        
-        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-        let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
-            let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 8].roomNum!)&roomTime=\(self.times[sender.tag])00_2&resTime=\(self.times[sender.tag]):00"
-            let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
-            cell.roomTwoButton.layer.sublayers?.removeAll()
-            cell.roomTwoLabel.text = self.status[0]
-            cell.roomTwoButton.isEnabled = false
-            let model = NetworkModel(self)
-            model.givePlaystation(param: param, tag: sender.tag)
-            self.startLoading()
+        if appDelegate.profileInfo?.reserved! == 0 {
+            let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
+            
+            //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+            let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 8].roomNum!)&roomTime=\(self.times[sender.tag])00_2&resTime=\(self.times[sender.tag]):00"
+                let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
+                cell.roomTwoButton.layer.sublayers?.removeAll()
+                cell.roomTwoLabel.text = self.status[0]
+                cell.roomTwoButton.isEnabled = false
+                let model = NetworkModel(self)
+                model.givePlaystation(param: param, tag: sender.tag)
+                self.startLoading()
+            }
+            
+            let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
         }
-        
-        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelButton)
-        self.present(alertController,animated: true,completion: nil)
+        else {
+            let alertController = UIAlertController(title: "이미 예약된 이력이 있습니다",message: "한 사람당 하나의 예약만 가능합니다.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
+        }
     }
     
     @objc func roomThreeClicked(sender: UIButton) {
-        let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
-        
-        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-        let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
-            let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 16].roomNum!)&roomTime=\(self.times[sender.tag])00_3&resTime=\(self.times[sender.tag]):00"
-            let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
-            cell.roomThreeButton.layer.sublayers?.removeAll()
-            cell.roomThreeLabel.text = self.status[0]
-            cell.roomThreeButton.isEnabled = false
-            let model = NetworkModel(self)
-            model.givePlaystation(param: param, tag: sender.tag)
-            self.startLoading()
+        if appDelegate.profileInfo?.reserved! == 0 {
+            let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
+            
+            //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+            let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 16].roomNum!)&roomTime=\(self.times[sender.tag])00_3&resTime=\(self.times[sender.tag]):00"
+                let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
+                cell.roomThreeButton.layer.sublayers?.removeAll()
+                cell.roomThreeLabel.text = self.status[0]
+                cell.roomThreeButton.isEnabled = false
+                let model = NetworkModel(self)
+                model.givePlaystation(param: param, tag: sender.tag)
+                self.startLoading()
+            }
+            
+            let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
         }
-        
-        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelButton)
-        self.present(alertController,animated: true,completion: nil)
+        else {
+            let alertController = UIAlertController(title: "이미 예약된 이력이 있습니다",message: "한 사람당 하나의 예약만 가능합니다.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
+        }
     }
     
     @objc func roomFourClicked(sender: UIButton) {
-        let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
-        
-        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-        let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
-            let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 24].roomNum!)&roomTime=\(self.times[sender.tag])00_4&resTime=\(self.times[sender.tag]):00"
-            let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
-            cell.roomFourButton.layer.sublayers?.removeAll()
-            cell.roomFourLabel.text = self.status[0]
-            cell.roomFourButton.isEnabled = false
-            let model = NetworkModel(self)
-            model.givePlaystation(param: param, tag: sender.tag)
-            self.startLoading()
+        if appDelegate.profileInfo?.reserved! == 0 {
+            let alertController = UIAlertController(title: "예약하시겠습니까?",message: "PS4 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
+            
+            //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+            let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 24].roomNum!)&roomTime=\(self.times[sender.tag])00_4&resTime=\(self.times[sender.tag]):00"
+                let cell = self.playstationCollectionView.cellForItem(at: [0,sender.tag]) as! PlaystationCollectionViewCell
+                cell.roomFourButton.layer.sublayers?.removeAll()
+                cell.roomFourLabel.text = self.status[0]
+                cell.roomFourButton.isEnabled = false
+                let model = NetworkModel(self)
+                model.givePlaystation(param: param, tag: sender.tag)
+                self.startLoading()
+            }
+            
+            let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
         }
-        
-        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelButton)
-        self.present(alertController,animated: true,completion: nil)
+        else {
+            let alertController = UIAlertController(title: "이미 예약된 이력이 있습니다",message: "한 사람당 하나의 예약만 가능합니다.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
+        }
     }
     
     func startLoading() {

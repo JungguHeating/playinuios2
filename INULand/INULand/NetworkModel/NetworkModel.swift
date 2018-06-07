@@ -40,7 +40,7 @@ class NetworkModel{
         Alamofire.request("\(profileURL)?\(param)", method: .post, parameters: nil, headers: nil).responseJSON { res in
             switch res.result{
             case .success(let item):
-                self.view.networkSuc(resultdata: item, code: "cancales", tag: 10)
+                self.view.networkSuc(resultdata: item, code: "cancels", tag: 10)
                 break
             case .failure(let error):
                 print(error)

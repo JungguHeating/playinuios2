@@ -84,6 +84,7 @@ class ProfileViewController: UIViewController {
             self.reservationCancelButton.isEnabled = false
             self.noReservationLabel.text = "예약된 내용이 없습니다"
             self.appDelegate.profileInfo?.reserved = 0
+            self.view.makeToast("예약이 취소되었습니다")
         }
         
         let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
@@ -182,10 +183,11 @@ extension ProfileViewController : NetworkCallback {
                 self.appDelegate.profileInfo = obj
             }
         }
-        else if code == "cancales"{
+        else if code == "cancels"{
             print("12345566")
             let model = NetworkModel(self)
             model.getProfile()
+            self.view.makeToast("예약이 취소되었습니다")
         }
     }
     func networkFail(code: String) {

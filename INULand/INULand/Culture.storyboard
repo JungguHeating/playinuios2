@@ -30,11 +30,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fB7-Pg-fKk">
-                                <rect key="frame" x="0.0" y="129" width="414" height="558"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="560"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-6Z-WFa">
-                                        <rect key="frame" x="15" y="0.0" width="384" height="558"/>
+                                        <rect key="frame" x="0.0" y="-10" width="414" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="h3S-gv-nMx">
@@ -45,7 +45,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Culture2CollectionViewCell" reuseIdentifier="Culture2CollectionViewCell" id="eno-M5-BUZ" customClass="Culture2CollectionViewCell" customModule="INULand" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="36" width="384" height="140"/>
+                                                <rect key="frame" x="15" y="36" width="384" height="140"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="140"/>
@@ -91,7 +91,7 @@
                                         </cells>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-nb-oPz">
-                                        <rect key="frame" x="15" y="0.0" width="384" height="558"/>
+                                        <rect key="frame" x="0.0" y="-10" width="414" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7PY-AC-Wza">
@@ -102,7 +102,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CultureCollectionViewCell" reuseIdentifier="CultureCollectionViewCell" id="rAp-n5-eEr" customClass="CultureCollectionViewCell" customModule="INULand" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="36" width="384" height="140"/>
+                                                <rect key="frame" x="15" y="36" width="384" height="140"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="384" height="140"/>

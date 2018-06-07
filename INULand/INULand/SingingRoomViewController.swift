@@ -38,6 +38,8 @@ class SingingRoomViewController: UIViewController {
         model.getSingingRoom()
         collectionViewInitialize()
         startLoading()
+        let date = Date()
+        print(date)
         // Do any additional setup after loading the view.
     }
     
@@ -214,47 +216,67 @@ extension SingingRoomViewController {
     }
     
     @objc func roomOneClicked(sender: UIButton) {
-        let alertController = UIAlertController(title: "예약하시겠습니까?",message: "노래방 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
-        
-        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-        let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
-            let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag].roomNum!)&roomTime=\(self.times[sender.tag])00&resTime=\(self.times[sender.tag]):00"
-            let cell = self.singCollectionView.cellForItem(at: [0,sender.tag]) as! SingingRoomCollectionViewCell
-            cell.roomOneButton.layer.sublayers?.removeAll()
-            cell.roomOneLabel.text = self.status[0]
-            cell.roomOneButton.isEnabled = false
-            let model = NetworkModel(self)
-            model.giveSingingRoom(param: param, tag: sender.tag)
-            self.startLoading()
+        if appDelegate.profileInfo?.reserved! == 0 {
+            let alertController = UIAlertController(title: "예약하시겠습니까?",message: "노래방 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
+            
+            //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+            let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag].roomNum!)&roomTime=\(self.times[sender.tag])00&resTime=\(self.times[sender.tag]):00"
+                let cell = self.singCollectionView.cellForItem(at: [0,sender.tag]) as! SingingRoomCollectionViewCell
+                cell.roomOneButton.layer.sublayers?.removeAll()
+                cell.roomOneLabel.text = self.status[0]
+                cell.roomOneButton.isEnabled = false
+                let model = NetworkModel(self)
+                model.giveSingingRoom(param: param, tag: sender.tag)
+                self.startLoading()
+            }
+            
+            let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
         }
-        
-        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelButton)
-        self.present(alertController,animated: true,completion: nil)
+        else {
+            let alertController = UIAlertController(title: "이미 예약된 이력이 있습니다",message: "한 사람당 하나의 예약만 가능합니다.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
+        }
     }
     
     @objc func roomTwoClicked(sender: UIButton) {
-        let alertController = UIAlertController(title: "예약하시겠습니까?",message: "노래방 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
-        
-        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-        let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
-            let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 8].roomNum!)&roomTime=\(self.times[sender.tag])00_2&resTime=\(self.times[sender.tag]):00"
-            let cell = self.singCollectionView.cellForItem(at: [0,sender.tag]) as! SingingRoomCollectionViewCell
-            cell.roomTwoButton.layer.sublayers?.removeAll()
-            cell.roomTwoLabel.text = self.status[0]
-            cell.roomTwoButton.isEnabled = false
-            let model = NetworkModel(self)
-            model.giveSingingRoom(param: param, tag: sender.tag)
-            self.startLoading()
+        if appDelegate.profileInfo?.reserved! == 0 {
+            let alertController = UIAlertController(title: "예약하시겠습니까?",message: "노래방 / 예약시간 \(self.times[sender.tag]):00", preferredStyle: UIAlertControllerStyle.alert)
+            
+            //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+            let okAction = UIAlertAction(title: "예약", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+                let param = "stdId=201301484&roomNum=\(self.rooms[sender.tag + 8].roomNum!)&roomTime=\(self.times[sender.tag])00_2&resTime=\(self.times[sender.tag]):00"
+                let cell = self.singCollectionView.cellForItem(at: [0,sender.tag]) as! SingingRoomCollectionViewCell
+                cell.roomTwoButton.layer.sublayers?.removeAll()
+                cell.roomTwoLabel.text = self.status[0]
+                cell.roomTwoButton.isEnabled = false
+                let model = NetworkModel(self)
+                model.giveSingingRoom(param: param, tag: sender.tag)
+                self.startLoading()
+            }
+            
+            let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
         }
-        
-        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelButton)
-        self.present(alertController,animated: true,completion: nil)
+        else {
+            let alertController = UIAlertController(title: "이미 예약된 이력이 있습니다",message: "한 사람당 하나의 예약만 가능합니다.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.cancel, handler: nil)
+            
+            alertController.addAction(cancelButton)
+            self.present(alertController,animated: true,completion: nil)
+        }
     }
     
     func startLoading() {
