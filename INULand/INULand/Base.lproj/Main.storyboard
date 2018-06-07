@@ -207,7 +207,7 @@
                         <viewLayoutGuide key="safeArea" id="nZE-5W-oKv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabMic" id="uz6-bh-jVB">
-                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-6"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="loadingIndicator" destination="6lA-OP-u5X" id="bvt-XK-acl"/>
@@ -294,10 +294,10 @@
     </scenes>
     <resources>
         <image name="loginBubble" width="280" height="137"/>
-        <image name="tabCulture" width="51" height="49"/>
-        <image name="tabMic" width="39" height="55"/>
-        <image name="tabMy" width="28" height="51"/>
-        <image name="tabPS" width="46" height="49"/>
-        <image name="tabRent" width="54" height="54"/>
+        <image name="tabCulture" width="34" height="33"/>
+        <image name="tabMic" width="26" height="37"/>
+        <image name="tabMy" width="19" height="34"/>
+        <image name="tabPS" width="31" height="33"/>
+        <image name="tabRent" width="36" height="36"/>
     </resources>
 </document>

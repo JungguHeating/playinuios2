@@ -157,6 +157,9 @@ class CultureViewController: UIViewController {
  
  }
  */
+
+
+//customizing cell
 extension CultureViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Rent View Controller-->
         <scene sceneID="48P-i3-Q8c">
             <objects>
                 <viewController id="xmc-iF-bc8" customClass="RentViewController" customModule="INULand" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Pb-cm-dfG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gZD-Sg-u9d"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabRent" id="gZD-Sg-u9d">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="loadingIndicator" destination="K6H-q4-v1f" id="ugL-i5-WKe"/>
@@ -80,4 +82,7 @@
             <point key="canvasLocation" x="47.826086956521742" y="61.956521739130437"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabRent" width="36" height="36"/>
+    </resources>
 </document>
