@@ -8,8 +8,15 @@ class CultureViewController: UIViewController {
     @IBOutlet weak var RoomCollectionView: UICollectionView!
     @IBOutlet weak var DvdCollecionView: UICollectionView!
     
+    @IBOutlet weak var loadingview: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     
     var indexOfSegment: UInt = 1
+    
+    let dvdRoomType = ["2인용 DVD방", "4인용 DVD방"]
+    
+    var dvdRoomTypeInfo: DVDRoomTypeInfo?
     
     
     var movieImage:[UIImage] = [#imageLiteral(resourceName: "lalaland"),#imageLiteral(resourceName: "frozen"),#imageLiteral(resourceName: "moana"),#imageLiteral(resourceName: "insideout"),#imageLiteral(resourceName: "tangled"),#imageLiteral(resourceName: "bighero"),#imageLiteral(resourceName: "coco"),#imageLiteral(resourceName: "beauty"),#imageLiteral(resourceName: "zootopia"),#imageLiteral(resourceName: "ralph")]
@@ -61,25 +68,35 @@ class CultureViewController: UIViewController {
         RoomCollectionView.dataSource = self
         RoomCollectionView.delegate = self
         
+        self.RoomCollectionView.register(UINib(nibName:"RentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RentCollectionViewCell")
+        
+        self.DvdCollecionView.register(UINib(nibName:"Culture2CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Culture2CollectionViewCell")
+        
+        
+        let model = NetworkModel(self)
+        model.getDVDRoomTypeInfo()
+        
+        self.startLoading()
         
         // Control 5: Adding custom subview to Indicator
         let indicatorControl = BetterSegmentedControl(
             frame: CGRect(x: 0.0, y: 72.0, width: view.bounds.width, height: 57.0),
             titles: ["방 개수", "DVD목록"],
-            index: 0, options: [.backgroundColor(.white),
+            index: 0, options: [.backgroundColor(.clear),
                                 .titleColor(.lightGray),
                                 .indicatorViewBorderColor(.lightGray),
                                 .selectedTitleColor(UIColor(red:84/255, green:124/255, blue:227/255, alpha:1.00)),
                                 .bouncesOnChange(false),
                                 .panningDisabled(false)])
         indicatorControl.autoresizingMask = [.flexibleWidth]
-        let customSubview = UIView(frame: CGRect(x: 0, y: 51, width: 207, height: 4.0))
+        
+        let customSubview = UIView(frame: CGRect(x: 0, y: 49, width: 207, height: 10.0))
         customSubview.backgroundColor = UIColor(red:84/255, green:124/255, blue:227/255, alpha:1.00)
         customSubview.layer.cornerRadius = 2.0
         customSubview.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
         indicatorControl.addTarget(self, action: #selector(CultureViewController.whenSegmentChanged(_:)), for: .valueChanged)
         indicatorControl.addSubviewToIndicator(customSubview)
-        view.addSubview(indicatorControl)
+        self.view.insertSubview(indicatorControl, belowSubview: self.loadingview)
     }
     
     @objc func whenSegmentChanged(_ sender: BetterSegmentedControl) {
@@ -167,8 +184,7 @@ extension CultureViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.RoomCollectionView{
-            
-            return 3
+            return dvdRoomType.count
         }
         else{
             return 10
@@ -178,12 +194,8 @@ extension CultureViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.RoomCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CultureCollectionViewCell", for: indexPath) as! CultureCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RentCollectionViewCell", for: indexPath) as! RentCollectionViewCell
             cell.backgroundColor = UIColor.white
-            cell.layer.borderWidth = 0.5
-            cell.layer.borderColor = UIColor.lightGray.cgColor
-            
-            
             cell.layer.cornerRadius = 5
             cell.contentView.layer.borderWidth = 1.0
             cell.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -195,6 +207,26 @@ extension CultureViewController: UICollectionViewDataSource, UICollectionViewDel
             cell.layer.shadowOpacity = 0.4
             cell.layer.masksToBounds = false
             cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: 5).cgPath
+            
+            cell.view.layer.cornerRadius = 5
+            cell.view.layer.borderWidth = 1.0
+            cell.view.layer.borderColor = UIColor.clear.cgColor
+            cell.view.layer.masksToBounds = true
+            
+            cell.stuffLabel.text = dvdRoomType[indexPath.row]
+            cell.availableLabel.text = "사용가능한 방"
+            if dvdRoomTypeInfo != nil {
+                switch indexPath.row {
+                case 0:
+                    let temp: String = String((dvdRoomTypeInfo?.twoPeople)!)
+                    cell.countLabel.text = temp + "개"
+                case 1:
+                    let temp: String = String((dvdRoomTypeInfo?.fourPeople)!)
+                    cell.countLabel.text = temp + "개"
+                default:
+                    cell.countLabel.text = "0개"
+                }
+            }
             
             return cell
         }
@@ -202,11 +234,21 @@ extension CultureViewController: UICollectionViewDataSource, UICollectionViewDel
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Culture2CollectionViewCell", for: indexPath) as! Culture2CollectionViewCell
             cell.backgroundColor = UIColor.white
             cell.layer.borderWidth = 0.5
-            cell.layer.borderColor = UIColor.lightGray.cgColor
+            cell.layer.borderColor = UIColor.white.cgColor
             cell.movieImage.image = movieImage[indexPath.row]
             cell.Title.text = movieTitle[indexPath.row]
             cell.subTitle.text = movieSubTitle[indexPath.row]
-            cell.contents.text = movieContents[indexPath.row]
+            //            cell.contents.text = movieContents[indexPath.row]
+            
+            cell.Title.sizeToFit()
+            cell.subTitle.sizeToFit()
+            
+            //TextView line spacing, font adjustment
+            let style = NSMutableParagraphStyle()
+            style.lineSpacing = 4
+            let attributes = [NSAttributedStringKey.paragraphStyle : style, NSAttributedStringKey.font: UIFont(name: "NanumSquareOTFB", size: 11.0)!,
+                              NSAttributedStringKey.foregroundColor: UIColor(red:184/255, green:184/255, blue:184/255, alpha:1.00)]
+            cell.contents.attributedText = NSAttributedString(string: movieContents[indexPath.row], attributes: attributes)
             
             
             cell.layer.cornerRadius = 5
@@ -220,6 +262,8 @@ extension CultureViewController: UICollectionViewDataSource, UICollectionViewDel
             cell.layer.shadowOpacity = 0.4
             cell.layer.masksToBounds = false
             cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: 5).cgPath
+            
+            
             
             return cell
         }
@@ -228,8 +272,54 @@ extension CultureViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
     }
+}
+
+//Network part
+extension CultureViewController: NetworkCallback {
+    func networkSuc(resultdata: Any, code: String, tag: Int) {
+        if code == "dvdRoom" {
+            print(resultdata)
+            if let item = resultdata as? NSDictionary {
+                let twoPeople = item["twoPeople"] as? Int ?? -1
+                let fourPeople = item["fourPeople"] as? Int ?? -1
+                
+                let obj = DVDRoomTypeInfo.init(twoPeople: twoPeople, fourPeople: fourPeople)
+                self.dvdRoomTypeInfo = obj
+                self.RoomCollectionView.reloadData()
+                endLoading()
+            }
+        }
+    }
     
+    func networkFail(code: String) {
+        if code == "dvdRoom" {
+            print("문화센터 정보를 가져오는데 실패하였습니다.")
+        }
+        
+    }
+}
+
+
+//Functions
+extension CultureViewController {
+    func startLoading() {
+        self.loadingview.isHidden = false
+        self.loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
+    }
     
+    func endLoading() {
+        self.loadingview.isHidden = true
+        self.loadingIndicator.isHidden = true
+        self.loadingIndicator.stopAnimating()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let model = NetworkModel(self)
+        model.getDVDRoomTypeInfo()
+        self.startLoading()
+        
+    }
     
 }
 

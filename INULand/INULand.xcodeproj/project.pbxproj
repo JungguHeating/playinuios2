@@ -12,6 +12,7 @@
 		93B735A020C4CF3000C299FE /* RentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7359E20C4CF3000C299FE /* RentCollectionViewCell.swift */; };
 		93B735A120C4CF3000C299FE /* RentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93B7359F20C4CF3000C299FE /* RentCollectionViewCell.xib */; };
 		93B735A320C4D1D300C299FE /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B735A220C4D1D300C299FE /* RentViewController.swift */; };
+		AFDEF2F220C9705000F463EE /* DVDRoomTypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEF2F120C9705000F463EE /* DVDRoomTypeInfo.swift */; };
 		C8A99ABF20C586EC00A8CBB0 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A99ABE20C586EC00A8CBB0 /* Contact.swift */; };
 		C8A99AC120C5889A00A8CBB0 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A99AC020C5889A00A8CBB0 /* NetworkModel.swift */; };
 		C8A99AC320C58A7400A8CBB0 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A99AC220C58A7400A8CBB0 /* NetworkCallback.swift */; };
@@ -49,6 +50,7 @@
 		93B7359E20C4CF3000C299FE /* RentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCollectionViewCell.swift; sourceTree = "<group>"; };
 		93B7359F20C4CF3000C299FE /* RentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentCollectionViewCell.xib; sourceTree = "<group>"; };
 		93B735A220C4D1D300C299FE /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
+		AFDEF2F120C9705000F463EE /* DVDRoomTypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVDRoomTypeInfo.swift; sourceTree = "<group>"; };
 		C8A99ABE20C586EC00A8CBB0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		C8A99AC020C5889A00A8CBB0 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		C8A99AC220C58A7400A8CBB0 /* NetworkCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C8A99AC220C58A7400A8CBB0 /* NetworkCallback.swift */,
 				DAF9023120C64B7C005DB2B9 /* SingingRoom.swift */,
 				DAF7457D20C7F6110081EF41 /* RentalInfo.swift */,
+				AFDEF2F120C9705000F463EE /* DVDRoomTypeInfo.swift */,
 			);
 			path = NetworkModel;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				C8A99ABF20C586EC00A8CBB0 /* Contact.swift in Sources */,
 				DAF9023220C64B7C005DB2B9 /* SingingRoom.swift in Sources */,
 				DA22906120BD483F00159593 /* LoginViewController.swift in Sources */,
+				AFDEF2F220C9705000F463EE /* DVDRoomTypeInfo.swift in Sources */,
 				938DF2FC20C5719D006ACEA9 /* CultureViewController.swift in Sources */,
 				DA22905F20BD483F00159593 /* AppDelegate.swift in Sources */,
 			);
@@ -491,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8MB894TP6V;
+				DEVELOPMENT_TEAM = 3U3H8GE38E;
 				INFOPLIST_FILE = INULand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "INU-school-lab-hw.INULand";
@@ -507,7 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8MB894TP6V;
+				DEVELOPMENT_TEAM = 3U3H8GE38E;
 				INFOPLIST_FILE = INULand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "INU-school-lab-hw.INULand";

@@ -18,6 +18,13 @@ class Culture2CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.movieImage.layer.cornerRadius = 5
+        self.movieImage.layer.borderWidth = 1.0
+        self.movieImage.layer.borderColor = UIColor.clear.cgColor
+        self.movieImage.layer.masksToBounds = true
+        
+        self.contents.isEditable = false
+        
     }
 
 }

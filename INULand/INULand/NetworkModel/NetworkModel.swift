@@ -149,5 +149,22 @@ class NetworkModel{
                 }
         }
     }
+    
+    func getDVDRoomTypeInfo() {
+        let url = URL.init(string: "https://playground-e61bc.firebaseapp.com/dvd")
+        Alamofire.request(url!, method: .get, parameters: nil, headers: nil).responseJSON
+            { res in
+                switch res.result {
+                case .success(let item):
+                    self.view.networkSuc(resultdata: item, code: "dvdRoom", tag: 10)
+                    break
+                case .failure(let error):
+                    self.view.networkFail(code: "dvdRoom")
+                    print(error)
+                    break
+                }
+        }
+    }
+    
 }
 

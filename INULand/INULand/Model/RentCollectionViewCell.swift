@@ -12,7 +12,9 @@ class RentCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var stuffLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var availableLabel: UILabel!
     @IBOutlet weak var view: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
