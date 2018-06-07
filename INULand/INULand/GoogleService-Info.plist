@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>865549640657-qad8vn8pm4g7io9mih817mtsbh9155o5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.865549640657-qad8vn8pm4g7io9mih817mtsbh9155o5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClcOYQ8N5-py7ya34Mcyu5VJZGzP6I6Uc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>865549640657</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>INU-school-lab-hw.INULand</string>
+	<key>PROJECT_ID</key>
+	<string>playground-e61bc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>playground-e61bc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:865549640657:ios:9e787f33c3f98667</string>
+	<key>DATABASE_URL</key>
+	<string>https://playground-e61bc.firebaseio.com</string>
+</dict>
+</plist>

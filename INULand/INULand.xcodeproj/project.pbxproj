@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A68DF9320C8C54A001FD8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A68DF9220C8C54A001FD8EF /* GoogleService-Info.plist */; };
 		4A46897C3BAC902BFE12C4E1 /* Pods_INULand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A8C196B6DF658452F45DD2 /* Pods_INULand.framework */; };
 		938DF2FC20C5719D006ACEA9 /* CultureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938DF2FB20C5719D006ACEA9 /* CultureViewController.swift */; };
 		93B735A020C4CF3000C299FE /* RentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7359E20C4CF3000C299FE /* RentCollectionViewCell.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A68DF9220C8C54A001FD8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54A8C196B6DF658452F45DD2 /* Pods_INULand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INULand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BDBD47A5A03DD8EE6A3514 /* Pods-INULand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INULand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INULand/Pods-INULand.debug.xcconfig"; sourceTree = "<group>"; };
 		938DF2FB20C5719D006ACEA9 /* CultureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				93B735A220C4D1D300C299FE /* RentViewController.swift */,
 				C8F183B420C458C500ED8321 /* ProfileViewController.swift */,
 				DA58CF9520C43838005C9993 /* Profile.storyboard */,
+				1A68DF9220C8C54A001FD8EF /* GoogleService-Info.plist */,
 			);
 			path = INULand;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				DA58CF8E20C437A9005C9993 /* Playstation.storyboard in Resources */,
 				DA58CF9620C43838005C9993 /* Profile.storyboard in Resources */,
+				1A68DF9320C8C54A001FD8EF /* GoogleService-Info.plist in Resources */,
 				DAF9023A20C653C8005DB2B9 /* SingingRoomCollectionViewCell.xib in Resources */,
 				DAF7457A20C7B08D0081EF41 /* PlaystationCollectionViewCell.xib in Resources */,
 				DA22906920BD483F00159593 /* LaunchScreen.storyboard in Resources */,
@@ -298,19 +302,27 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-INULand/Pods-INULand-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BetterSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

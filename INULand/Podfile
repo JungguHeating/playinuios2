@@ -13,4 +13,6 @@ pod 'Kingfisher'
 pod 'SwiftyJSON'
 pod 'IQKeyboardManagerSwift'
 pod 'BetterSegmentedControl', '~> 0.9'
+pod 'Firebase/Core'
+pod 'Firebase/Performance'
 end
