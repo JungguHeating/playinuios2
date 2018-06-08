@@ -185,6 +185,7 @@ extension SingingRoomViewController: NetworkCallback {
             self.isSuccess = false
             let model = NetworkModel(self)
             model.getSingingRoom()
+            sleep(1)
         }
         if code == "reservationFail" {
             self.view.makeToast("이미 예약된 자리입니다")

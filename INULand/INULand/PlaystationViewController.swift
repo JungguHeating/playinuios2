@@ -226,7 +226,7 @@ extension PlaystationViewController: NetworkCallback {
             self.isSuccess = false
             let model = NetworkModel(self)
             model.getPlaystation()
-            
+            sleep(2)
         }
         if code == "PSreservationFail" {
             self.view.makeToast("이미 예약된 자리입니다")

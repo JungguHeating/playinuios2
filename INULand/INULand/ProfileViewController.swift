@@ -60,7 +60,19 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logOutButtonClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let alertController = UIAlertController(title: "로그아웃 하시겠습니까?",message: " ", preferredStyle: UIAlertControllerStyle.alert)
+        
+        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+        let okAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.destructive){ (action: UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        let cancelButton = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelButton)
+        self.present(alertController,animated: true,completion: nil)
+        
     }
     
     @IBAction func reservationCancleClicked(_ sender: Any) {
